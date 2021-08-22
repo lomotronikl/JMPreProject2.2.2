@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+
+<H1>Cars</H1>
+
+<p><a href="cars.html?count=2">2</a></p>
+<p><a href="cars.html?count=3">3</a></p>
+<p><a href="cars.html?count=4">4</a></p>
+<p><a href="cars.html?count=5">5</a></p>
+<p><a href="cars.html?count=6">6</a></p>
+
+
+<table>
+    <tr><td>Model Name</td> <td>Color</td> <td>Model number</td></tr>
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.getModelName}"></td>
+        <td th:utext="${car.getColor}"></td>
+        <td th:utext="${car.getModelNumber}"></td>
+    </tr>
+</table>
+</body>
+</html>
